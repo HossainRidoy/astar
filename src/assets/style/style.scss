@@ -1,0 +1,351 @@
+$orange: rgb(237, 214, 18);
+$green-light: #1a9b45;
+$green-div: #117734;
+$red: red;
+$black: #000;
+$white: #fff;
+
+// background color start
+.bg-orange {
+    background-color: $orange;
+}
+.bg-green-light {
+    background-color: $green-light;
+}
+.bg-green-div {
+    background-color: $green-div;
+}
+.bg-black {
+    background-color: $black;
+}
+.bg-red {
+    background-color: $red;
+}
+// background color end
+
+// background color start
+.text-color-orange {
+    color: $orange;
+}
+.text-color-green-light {
+    color: $green-light;
+}
+.text-color-green-div {
+    color: $green-div;
+}
+.text-color-black {
+    color: $black;
+}
+.text-color-red {
+    color: $red;
+}
+// background color end
+
+body {
+    font-family: Hind Siliguri;
+    letter-spacing: 1px;
+}
+
+.btn-red {
+    display: inline-block;
+    background-color: $red;
+    padding: 5px 35px;
+    border: none;
+    border: 1px solid $red;
+    color: $white;
+    border-radius: 30px;
+    font-size: 22px;
+    font-weight: 600;
+    text-decoration: none;
+    &:hover {
+        color: $black;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+// font size start
+h1 {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 700;
+}
+h3 {
+    font-size: 24px;
+    font-weight: 700;
+}
+h4 {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.font-size-18 {
+    font-size: 18px;
+}
+.font-size-22 {
+    font-size: 22px;
+}
+// font size end
+
+// padding start
+.padding-py-150 {
+    padding: 150px 0;
+}
+// padding end
+
+// navbar start
+#navbar {
+    padding: 20px 0;
+    background-color: transparent;
+    transition: 0.5s;
+
+    img {
+        height: 120px !important;
+        transition: 0.5s;
+    }
+
+    &.sticky {
+        padding: 10px 0;
+        background-color: $white;
+        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
+        img {
+            height: 60px !important;
+        }
+        a {
+            color: $black !important;
+        }
+    }
+    .nav-item{
+        &:hover{
+            .nav-link{
+                color:$orange !important;
+            }
+        }
+    }
+}
+// navbar end
+
+// slide start
+#slide {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5046393557422969) 0%, rgba(187, 187, 187, 0) 100%);
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    .slide-text {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+// slide end
+
+// product start
+#product {
+    .products-thumbnail {
+        box-shadow: 5px 5px 12px 0px rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+        overflow: hidden;
+        .left-product {
+            background-color: #f9f9f9;
+        }
+        .right-product {
+            background-color: #efefef;
+        }
+    }
+}
+// product end
+
+// dilarship start
+#dilarship {
+    background-color: #f6f6f6;
+    .form-control {
+        padding: 18px 25px;
+        border-radius: 15px;
+        box-shadow: 1px 1px 5px -1px rgba(0, 0, 0, 0.2);
+    }
+
+    .radioBtn {
+        .cusIcon {
+            position: relative;
+            cursor: pointer;
+            margin-left: 30px;
+            &::before {
+                content: "";
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                background-color: $white;
+                box-shadow: 0 0 3px -1px rgba(0, 0, 0, 0.9);
+                border-radius: 100%;
+                top: 0;
+                left: -30px;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                // background-color: $red;
+                box-shadow: 0 0 3px -1px rgba(0, 0, 0, 0.9);
+                border-radius: 100%;
+                top: 0;
+                left: -30px;
+            }
+        }
+        input{
+            display: none;
+        }
+        input:checked + .cusIcon::after{
+            background-color: red !important;
+        }
+       
+    }
+   
+}
+
+// dilarship end
+
+// contact start
+#contacts{
+    .icon{
+        width: 30px;
+        height: 30px;
+        background-color: $red;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+// contact end
+
+// footer start
+#footer {
+    position: relative;
+    background-color: $green-light;
+    padding: 100px 0;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 15px;
+        background-color: $green-div;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+    .form-control {
+        background-color: transparent !important;
+        border-radius: 30px;
+        border-color: $white;
+        padding: 12px 24px !important;
+
+        &::placeholder {
+            color: $white !important;
+            font-size: 18px;
+        }
+        &:focus {
+            background-color: $white !important;
+        }
+    }
+    .fBtn {
+        background-color: transparent;
+        border: none;
+        border-radius: 30px;
+        border: 1px solid $orange;
+        padding: 12px 24px;
+        color: $white;
+    }
+    .icon {
+        cursor: pointer;
+        border: 1px solid $orange;
+        display: inline-block;
+        width: 40px !important;
+        height: 40px !important;
+        border-radius: 30px;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: $black;
+        padding: 0px 20px;
+        img {
+            height: 20px;
+        }
+        .icon-text {
+            display: none;
+            color: $white;
+        }
+        &:hover {
+            width: 120px !important;
+            .icon-text {
+                display: block;
+            }
+        }
+    }
+}
+// footer end
+
+
+
+@media screen and (max-width: 767px){
+    #navbar{
+        background-color: $red;
+        padding: 5px 0;
+    }
+    .logo{
+        img{
+            max-height: 50px !important;
+        }
+    }
+    #headingTitle{
+        img{
+            width: 40px !important;
+        }
+    }
+    #slide .slide-text {
+        position: absolute;
+        top: 65%;
+        transform: translateY(-35%);
+    }
+    h1{
+        font-size: 26px !important;
+    }  
+    h2{
+        font-size: 20px !important;
+    }     
+    h3{
+        font-size: 18px !important;
+    } 
+    h4{
+        font-size: 18px !important;
+    }
+    .font-size-22{
+        font-size: 15px !important;
+    }
+    .btn-red{
+        font-size: 16px !important;
+    }
+    .padding-py-150 {
+        padding: 90px 0 !important;
+    }
+}
